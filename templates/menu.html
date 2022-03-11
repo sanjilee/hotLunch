@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    C$50 Finance
+{% endblock %}
+
+{% block main %}
+    <form action="/menu" method="POST">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="dates">Dates</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(weeks) %}
+                <tr>
+                    <td class="dates">
+                        {{ dates[i] }}
+                    </td>
+                    <td>
+                        <input type="radio" name={{ i }}Monday value="None" checked="checked"> None
+                        <br>
+                        <input type="radio" name={{ i }}Monday value="menu 1"> {{ dictionary[i][0]['menu 1'] }}
+                        <br>
+                        <input type="radio" name={{ i }}Monday value="menu 2"> {{ dictionary[i][0]['menu 2'] }}
+                    </td>
+                    <td>
+                        <input type="radio" name={{ i }}Tuesday value="None" checked="checked"> None
+                        <br>
+                        <input type="radio" name={{ i }}Tuesday value="menu 1"> {{ dictionary[i][1]['menu 1'] }}
+                        <br>
+                        <input type="radio" name={{ i }}Tuesday value="menu 2"> {{ dictionary[i][1]['menu 2'] }}
+                    </td>
+                    <td>
+                        <input type="radio" name={{ i }}Wednesday value="None" checked="checked"> None
+                        <br>
+                        <input type="radio" name={{ i }}Wednesday value="menu 1"> {{ dictionary[i][2]['menu 1'] }}
+                        <br>
+                        <input type="radio" name={{ i }}Wednesday value="menu 2"> {{ dictionary[i][2]['menu 2'] }}
+                    </td>
+                    <td>
+                        <input type="radio" name={{ i }}Thursday value="None" checked="checked"> None
+                        <br>
+                        <input type="radio" name={{ i }}Thursday value="menu 1"> {{ dictionary[i][3]['menu 1'] }}
+                        <br>
+                        <input type="radio" name={{ i }}Thursday value="menu 2"> {{ dictionary[i][3]['menu 2'] }}
+                    </td>
+                    <td>
+                        <input type="radio" name={{ i }}Friday value="None" checked="checked"> None
+                        <br>
+                        <input type="radio" name={{ i }}Friday value="menu 1"> {{ dictionary[i][4]['menu 1'] }}
+                        <br>
+                        <input type="radio" name={{ i }}Friday value="menu 2"> {{ dictionary[i][4]['menu 2'] }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <select hidden name=WEEKS><option value={{ weeks }}></option></select>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,21 @@
+date	menu 1	menu 2
+11th to 13th August	N/A	N/A
+	N/A	N/A
+	Jollof Rice Plantain and Beef	Hot Dogs
+	Sharwarma	Spaghetti
+	corn dog	rice
+16th to 20th August	yam	indomie
+	ohoh	sanji
+	work	please
+	potato	hamburgers
+	rice	corn dog
+23rd to 27th August	Jollof	yam
+	sausage roll	indomie
+	rice	Spaghetti
+	yam	jollof
+	hot dogs	Spaghetti
+30th August to 3rd September	hamburgers	rice
+	Sharwarma	yam
+	spaghetti	jollof
+	beriox	hamburgers
+	corn dog	rice

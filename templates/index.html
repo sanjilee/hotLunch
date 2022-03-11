@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block main %}
+    <h1>{{ username }}'s Hot Lunch Menu</h1>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="dates">Dates</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(weeks) %}
+            <tr>
+                <td class="dates">{{ dates[i] }}</td>
+                <td>{{ dictionary[i][0] }}</td>
+                <td>{{ dictionary[i][1] }}</td>
+                <td>{{ dictionary[i][2] }}</td>
+                <td>{{ dictionary[i][3] }}</td>
+                <td>{{ dictionary[i][4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    <table style="all: revert">
+                        <thead>
+                            <td><h6>School</h6></td>
+                            <td><h6>Cost per meal</h6></td>
+                        </thead>
+                        <tr style="all: revert">
+                            <td>KD - Grade 2</td>
+                            <td>₦600</td>
+                        </tr>
+                        <tr>
+                            <td>Grade 3 - Grade 5</td>
+                            <td>₦700</td>
+                        </tr>
+                        <tr style="all: revert">
+                            <td>Middle School</td>
+                            <td>₦800</td>
+                        </tr>
+                        <tr style="all: revert">
+                            <td>High School</td>
+                            <td>₦1000</td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan="2"></td>
+                <td colspan="2"><p>Number of meals: {{ number }}</p><p>Cost per meal ({{ school }}): ₦{{ price }}</p><h5>Total: ₦{{ total }}</h5><br><br><p>Not the correct pricing? Contact administration!</p><p>Click <a href="/menu">here</a> or click on "Menu" to change your selection</p></td>
+            </tr>
+        </tfoot>
+    </table>
+    <button class="btn btn-primary" onclick="window.print();">Print</button>
+{% endblock %}

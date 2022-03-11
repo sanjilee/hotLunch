@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block main %}
+    <h1>Admin page</h1>
+    <br>
+    <hr>
+    <br>
+    <h4>Upload new menu</h4>
+    <br>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+    <br>
+    <hr>
+    <br>
+    <h4><a href="/download">Download orders</a></h4>
+    <br>
+    <hr>
+    <br>
+    <h4><a href="/delete">Reset users and data</a></h4>
+    <br>
+    <hr>
+    <br>
+    <h4>Mark student as paid</h4>
+    <form action="/admin" method="post">
+        <input autocomplete="off" autofocus class="form-control" name="username" placeholder="First and last name" type="text">
+        <button class="btn btn-primary" type="submit">Mark as paid</button>
+    </form>
+    <br>
+    <hr>
+    <br>
+{% endblock %}

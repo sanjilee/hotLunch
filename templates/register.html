@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+        <div class="form-group">
+            <p>Please input the student's first and last name.<br>Example: "John Doe"</p>
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Student Name" type="text">
+        </div>
+        <div class="form-group">
+            <h5>Please select a grade:</h3>
+            <select name="grade">
+                <option value="kd">Kindergarten</option>
+                <option value="g1">Grade 1</option>
+                <option value="g2">Grade 2</option>
+                <option value="g3">Grade 3</option>
+                <option value="g4">Grade 4</option>
+                <option value="g5">Grade 5</option>
+                <option value="middle">Grade 6</option>
+                <option value="middle">Grade 7</option>
+                <option value="middle">Grade 8</option>
+                <option value="high">Grade 9</option>
+                <option value="high">Grade 10</option>
+                <option value="high">Grade 11</option>
+                <option value="high">Grade 12</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="confirmation" placeholder="Password Confirmation" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+{% endblock %}
